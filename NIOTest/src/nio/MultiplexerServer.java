@@ -18,6 +18,7 @@ public class MultiplexerServer  implements Runnable{
 	
 	private Selector selector;
 	private ServerSocketChannel servChannel;
+	private int i = 0;
 	
 	private volatile boolean stop = false;
 	

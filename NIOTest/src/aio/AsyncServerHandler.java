@@ -60,7 +60,7 @@ class AcceptCompletionHandler implements CompletionHandler<AsynchronousSocketCha
 	@Override
 	public void completed(AsynchronousSocketChannel result, AsyncServerHandler attachment) {
 		System.out.println("accept completed.");
-		//调用回调
+		//调用回调,继续监听
 		attachment.asynchronousServerSocketChannel.accept(attachment, this);
 		ByteBuffer buffer = ByteBuffer.allocate(1024);
 		//buffer作为读入的数据流，又作为attacment传入ReadCompletionHandler.
